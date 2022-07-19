@@ -1,0 +1,84 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fizzbuzz</title>
+    <style>
+      /* body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: wrap row;
+        padding: 0;
+        margin: 0;
+      }
+      body > * {
+        width: 100vw;
+      } */
+
+      ul.active {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        float: left;
+      }
+
+      main {
+        transition: filter 0.5s ease;
+      }
+      .blur {
+        filter: blur(5px);
+      }
+
+      .error {
+        color: red;
+        line-height: 5px;
+      }
+      .error .text{
+        margin-left: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <form>
+        <fieldset>
+          <legend>FizzBuzz:</legend>
+
+          <label for="start-number">start number : </label>
+          <input type="number" id="start-number" value="1" />
+
+          <br />
+
+          <label for="final-number">final number : </label>
+          <input type="number" id="final-number" value="15" />
+
+          <br />
+
+          <label for="separator">separator : </label>
+          <input type="text" id="separator" value="-" maxlength="1" />
+
+          <br />
+
+          <button type="button" id="advanced-settings">
+            advanced settings
+          </button>
+          <button class="start" type="button">start</button>
+          <!-- <button class="save" type="button">save</button> -->
+        </fieldset>
+      </form>
+
+      <div class="error">
+        <h2 class="errtitle"></h2>
+        <br />
+        <span class="text"></span>
+      </div>
+    </main>
+
+    <ul class="special-numbers"></ul>
+
+    <script src="fizzbuzz.js"></script>
+  </body>
+</html>
